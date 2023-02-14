@@ -100,7 +100,7 @@ const getAllStudents = asyncHandler(async (req, res) => {
 
   const mentor = await Mentor.findOne({ name: mentorName });
   const allStudents = mentor.students;
-  console.log(allStudents);
+  //console.log(allStudents);
   res.status(200).json({
     message: `Please find all the students assosiated to the mentor: ${mentorName}`,
     allStudents,
